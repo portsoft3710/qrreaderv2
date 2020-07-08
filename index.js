@@ -29,7 +29,7 @@ function draw() {
   canvas.height = window.innerHeight;
   ctx.drawImage(video, 0, 0);
   requestAnimationFrame(draw);
-  //checkPicture();
+  checkPicture();
 }
 function checkPicture(){
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
