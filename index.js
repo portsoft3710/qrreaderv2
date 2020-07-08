@@ -34,7 +34,7 @@ function draw() {
 function checkPicture(){
   const canvas = document.querySelector("canvas");
   alert(canvas);
-  const ctx = canvas.getContetext("2d");
+  const ctx = canvas.getContext("2d");
   alert(ctx);
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   alert(imageData);
