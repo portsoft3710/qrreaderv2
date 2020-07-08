@@ -28,21 +28,6 @@ function draw() {
   canvas.width  = window.innerWidth;
   canvas.height = window.innerHeight;
   ctx.drawImage(video, 0, 0);
-  //checkPicture();
+
   requestAnimationFrame(draw);
-}
-function checkPicture(){
-	const ctx = canvas.getContext("2d");
-	ctx.drawImage(video, 0, 0);
-	const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-	const code = jsQR(imageData.data, canvas.width, canvas.height);
-	
-   if(code){
-	   alert(code);
-   }
-	else{
-		setTimeout(() => {
-			checkPicture();
-		}, 300);
-	} 
 }
