@@ -40,6 +40,6 @@ function checkPicture(){
   else{
     setTimeout( () => {
       checkPicture();
-    }, 100);
+    }, 10);
   }
 }
