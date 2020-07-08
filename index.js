@@ -37,7 +37,7 @@ function checkPicture(){
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   const code = jsQR(imageData.data, canvas.width, canvas.height);
   if(code){
-    alert(code);
+    alert('code:' + code);
   }
   else{
     setTimeout( () => {
