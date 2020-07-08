@@ -27,8 +27,8 @@ function errorCallback(err) {
 function draw() {
   canvas.width  = window.innerWidth;
   canvas.height = window.innerHeight;
-
-  checkPicture();
+  ctx.drawImage(video, 0, 0);
+  //checkPicture();
   requestAnimationFrame(draw);
 }
 function checkPicture(){
