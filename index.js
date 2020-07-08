@@ -37,9 +37,9 @@ function checkPicture(){
   if(code){
     alert('code:' + code);
   }
-  else{
+  /*else{
     setTimeout( () => {
       checkPicture();
     }, 10);
-  }
+  }*/
 }
