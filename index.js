@@ -33,6 +33,9 @@ function draw() {
 }
 function checkPicture(){
   alert('AA');
+  const canvas = document.querySelector("canvas");
+  const ctx = canvas.getContetext("2d");
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   const code = jsQR(imageData.data, canvas.width, canvas.height);
   alert('BB');
   if(code){
