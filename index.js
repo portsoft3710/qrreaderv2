@@ -32,10 +32,12 @@ function draw() {
   requestAnimationFrame(draw);
 }
 function checkPicture(){
-  alert('AA');
   const canvas = document.querySelector("canvas");
+  alert(canvas);
   const ctx = canvas.getContetext("2d");
+  alert(ctx);
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  alert(imageData);
   const code = jsQR(imageData.data, canvas.width, canvas.height);
   alert('BB');
   if(code){
