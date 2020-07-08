@@ -28,8 +28,8 @@ function draw() {
   canvas.width  = window.innerWidth;
   canvas.height = window.innerHeight;
   ctx.drawImage(video, 0, 0);
-  checkPicture();
   requestAnimationFrame(draw);
+  //checkPicture();
 }
 function checkPicture(){
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
