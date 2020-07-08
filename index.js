@@ -27,19 +27,15 @@ function errorCallback(err) {
 function draw() {
   canvas.width  = window.innerWidth;
   canvas.height = window.innerHeight;
-  ctx.drawImage(video, 0, 0);
   checkPicture();
   requestAnimationFrame(draw);
 }
 function checkPicture(){
   const canvas = document.querySelector("canvas");
-  alert(canvas);
   const ctx = canvas.getContext("2d");
-  alert(ctx);
+  ctx.drawImage(video, 0, 0);
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  alert(imageData);
   const code = jsQR(imageData.data, canvas.width, canvas.height);
-  alert('BB');
   if(code){
     alert(code);
   }
