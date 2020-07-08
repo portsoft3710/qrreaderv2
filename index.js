@@ -2,7 +2,7 @@ const medias = {
   audio: false,
   video: {
     facingMode: {
-      exact: "user"
+      exact: "environment"
     }
   }
 };
@@ -32,7 +32,9 @@ function draw() {
   requestAnimationFrame(draw);
 }
 function checkPicture(){
+  alert('AA');
   const code = jsQR(imageData.data, canvas.width, canvas.height);
+  alert('BB');
   if(code){
     alert(code);
   }
